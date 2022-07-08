@@ -1,5 +1,6 @@
 function timer (limit) {
   const deadline = new Date(limit);
+  console.log(deadline)
 
   const promotionEnd = document.querySelector("#promotionEnd");
   const dateOfEnd = deadline.toLocaleString("us", {

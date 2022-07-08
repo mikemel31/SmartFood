@@ -14,6 +14,6 @@ window.addEventListener("DOMContentLoaded", function () {
     cards();
     forms("div.modal");
     sliders();
-    timer("10 July 2022");
+    timer("25 July 2022");
     modal("div.modal", "[data-modal]", modalTimerId);
     });

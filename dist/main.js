@@ -470,6 +470,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function timer(limit) {
   const deadline = new Date(limit);
+  console.log(deadline);
   const promotionEnd = document.querySelector("#promotionEnd");
   const dateOfEnd = deadline.toLocaleString("us", {
     month: "long",
@@ -610,7 +611,7 @@ window.addEventListener("DOMContentLoaded", function () {
   (0,_modules_cards__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])("div.modal");
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_modules_timer__WEBPACK_IMPORTED_MODULE_5__["default"])("10 July 2022");
+  (0,_modules_timer__WEBPACK_IMPORTED_MODULE_5__["default"])("25 July 2022");
   (0,_modules_modal__WEBPACK_IMPORTED_MODULE_6__["default"])("div.modal", "[data-modal]", modalTimerId);
 });
 })();

@@ -96,7 +96,7 @@ a {
   max-width: 170px;
 }
 .header__logo img {
-  width: 100%;
+  width: auto;
 }
 .header__links {
   display: flex;
@@ -651,4 +651,10 @@ a {
   to {
     opacity: 1;
   }
+}
+
+div .header__logo span {
+  font-size: medium;
+  color: orange;
+  text-transform: capitalize;
 }

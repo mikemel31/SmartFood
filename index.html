@@ -9,12 +9,13 @@
 <body>
     <header class="header">
         <div class="header__left-block">
-            <div class="header__logo">
-                <img src="icons/logo.svg" alt="Logo">
+            <div class="header__logo" style="display:flex; justify-content:center; flex-direction: column;">
+                <img src="img/logo.png" height="70px" width="70px" alt="Logo">
+                <span>SmartFood</span>
             </div>
             <nav class="header__links">
                 <a href="#" class="header__link">Food delivery</a>
-                <a href="#" class="header__link">Second point</a>
+                <a href="#calculator" class="header__link">Calculator</a>
             </nav>
         </div>
         <div class="header__right-block">
@@ -134,7 +135,7 @@
 
     <div class="divider"></div>
 
-    <div class="calculating">
+    <div id="calculator" class="calculating">
         <div class="container">
             <h2 class="title">Lets calculate your calorie need!
             </h2>
