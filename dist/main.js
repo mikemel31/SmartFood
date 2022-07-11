@@ -82,12 +82,30 @@ const calc = function () {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cardsData": () => (/* binding */ cardsData),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _services_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/services */ "./js/modules/services/services.js");
+const cardsData = [{
+  img: "img/tabs/fitness.jpg",
+  altimg: "fitness",
+  title: "Food plan 'Fitness'",
+  description: "The Fitness food plan is a new approach to cooking: more fresh vegetables and fruits. For people who are active and healthy, interested in sports. This is a brand new product with an optimal price and high quality!",
+  price: 9
+}, {
+  img: "img/tabs/lean.jpg",
+  altimg: "lean",
+  title: "Food plan 'Lean'",
+  description: "Our special Lean food plan is a careful selection of ingredients: the complete absence of animal products. Complete harmony with yourself and nature in every element! Everything will be 'Yummy'!",
+  price: 13
+}, {
+  img: "img/tabs/premium.jpg",
+  altimg: "premium",
+  title: "Food plan 'Premium'",
+  description: "For Premium food plan we use not only beautiful packaging design, but also high-quality execution of dishes. Different kinds of fish, seafood, fruits - you get  choice of dishes without going to a restaurant!",
+  price: 15
+}];
 
-
-function cards() {
+function cards(cardsData) {
   class MenuCard {
     constructor(src, alt, name, description, price, parentSelector) {
       this.name = name;
@@ -128,7 +146,7 @@ function cards() {
 
   }
 
-  (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getResourses)("http://localhost:3000/menu").then(data => data.forEach(_ref => {
+  return cardsData.forEach(_ref => {
     let {
       img,
       altimg,
@@ -137,7 +155,7 @@ function cards() {
       price
     } = _ref;
     return new MenuCard(img, altimg, title, description, price, ".menu .container").render();
-  }));
+  });
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cards);
@@ -604,11 +622,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 window.addEventListener("DOMContentLoaded", function () {
-  const modalTimerId = setTimeout(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_6__.modalWindowOpen)('div.modal', modalTimerId), 30000);
+  const modalTimerId = setTimeout(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_6__.modalWindowOpen)("div.modal", modalTimerId), 30000);
   (0,_modules_calc__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modules_cards__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_cards__WEBPACK_IMPORTED_MODULE_2__["default"])(_modules_cards__WEBPACK_IMPORTED_MODULE_2__.cardsData);
   (0,_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])("div.modal");
   (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_modules_timer__WEBPACK_IMPORTED_MODULE_5__["default"])("25 July 2022");
